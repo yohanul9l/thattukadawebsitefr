@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 140" width="360" height="140">
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#000000" flood-opacity="0.8"/>
+    </filter>
+  </defs>
+
+  <!-- Background boat and river crop -->
+  <image href="/thattukada_logo_bg.png" width="360" height="140" preserveAspectRatio="xMidYMid slice" />
+
+  <!-- Subtle atmospheric scrim -->
+  <rect width="360" height="140" fill="black" opacity="0.25" />
+
+  <!-- White Calligraphy Emblem: തട്ടുകട -->
+  <g filter="url(#shadow)" transform="translate(180, 72)">
+    <!-- Malayalam calligraphy text using system/Noto fallback -->
+    <text
+      x="0"
+      y="0"
+      text-anchor="middle"
+      fill="#FFFFFF"
+      font-family="'Anek Malayalam', 'Manjari', 'Noto Sans Malayalam', sans-serif"
+      font-size="64"
+      font-weight="800"
+      letter-spacing="-1.5px"
+    >തട്ടുകട</text>
+
+    <!-- Artistic sweeping flourish underline and dot -->
+    <path
+      d="M -75 20 C -25 36, 55 36, 95 18"
+      stroke="#FFFFFF"
+      stroke-width="5"
+      stroke-linecap="round"
+      fill="none"
+    />
+    <path
+      d="M -20 28 C -38 28, -50 38, -32 45 C -10 50, 60 30, 95 18"
+      stroke="#FFFFFF"
+      stroke-width="3"
+      stroke-linecap="round"
+      fill="none"
+    />
+    <ellipse cx="25" cy="30" rx="9" ry="4" fill="#FFFFFF" transform="rotate(-6 25 30)" />
+  </g>
+</svg>

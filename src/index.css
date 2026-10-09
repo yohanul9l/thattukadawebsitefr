@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5.5rem;
+}
+
+@layer base {
+  :root {
+    --font-editorial: 'Cormorant Garamond', 'Italiana', Georgia, serif;
+    --font-display: 'Cormorant Garamond', 'Outfit', Georgia, serif;
+    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-malayalam: 'Anek Malayalam', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #080d11;
+    color: #e2e8f0;
+    overflow-x: hidden;
+  }
+}
+
+/* Smooth button press & micro-interaction transitions */
+button,
+a[role="button"],
+.btn-smooth {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              background-color 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+              color 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+              opacity 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+
+button:active,
+a[role="button"]:active,
+.btn-smooth:active {
+  transform: scale(0.95);
+  transition-duration: 0.1s;
+}
+
+/* Smooth button hover elevation */
+.btn-hover-lift:hover {
+  transform: translateY(-2px);
+}
+
+.btn-hover-lift:active {
+  transform: scale(0.95) translateY(0);
+}
+
+/* Fade in scale animation */
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.96) translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.animate-fade-scale {
+  animation: fadeInScale 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.font-editorial {
+  font-family: var(--font-editorial);
+  font-feature-settings: "liga" 1, "dlig" 1;
+}
+
+.font-display {
+  font-family: var(--font-display);
+  font-feature-settings: "liga" 1, "dlig" 1;
+}
+
+.font-malayalam {
+  font-family: var(--font-malayalam);
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #080d11;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}

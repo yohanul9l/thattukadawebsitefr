@@ -1,0 +1,6 @@
+{
+  "name": "Thattukada Discord Community",
+  "description": "Clean, minimalistic, and modern website for the Thattukada Discord community — a cozy late-night hangout for chai, conversations, gaming, and creative vibes.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
